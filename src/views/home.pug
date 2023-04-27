@@ -10,8 +10,12 @@ html(lang="en")
         header
             h1 Hello!
         main
+            form#name
+                p Your nickname as
+                input(type="text", required)
+                button Apply
             ul
-            form
+            form#message
                 input(type="text", required)
                 button Send
         script(src="/public/js/app.js")
