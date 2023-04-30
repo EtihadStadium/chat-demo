@@ -19,8 +19,10 @@ socket.addEventListener("close", () => {
 });
 nicknameForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    const p = nicknameForm.querySelector("p");
     const input = nicknameForm.querySelector("input");
     socket.send(createMessage("nickname", input.value));
+    p.innerText = `Your nickname is ${input.value}`;
     input.value = "";
 });
 messageForm.addEventListener("submit", (event) => {
