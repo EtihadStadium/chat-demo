@@ -20,7 +20,8 @@ socket.addEventListener("close", () => {
 nicknameForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const input = nicknameForm.querySelector("input");
-    socket.send(createMessage("nickname"), input.value);
+    socket.send(createMessage("nickname", input.value));
+    input.value = "";
 });
 messageForm.addEventListener("submit", (event) => {
     event.preventDefault();
