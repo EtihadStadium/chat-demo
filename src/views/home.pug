@@ -8,13 +8,14 @@ html(lang="en")
         title chat-demo
     body
         header
-            h1 Hello!
+            h1 Chat Application
         main
             form#name
                 p Your nickname is
                 input(type="text", required)
                 button Apply
-            ul
+            div(style="display: flex; flex-direction: column-reverse; height: 500px; overflow: auto;")
+                ul
             form#message
                 input(type="text", required)
                 button Send
